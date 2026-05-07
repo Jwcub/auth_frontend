@@ -31,7 +31,7 @@ async function login(event) {
   }
 
   try {
-    const response = await fetch("https://auth-app-psi-ochre.vercel.app/api/login.html", {
+    const response = await fetch("https://auth-app-ncgj.onrender.com//api/login.html", {
       method: "POST",
       headers: {
         "content-type": "application/json"
@@ -72,7 +72,7 @@ async function newAccount(event) {
   }
 
   try {
-    const response = await fetch("https://auth-app-psi-ochre.vercel.app/api/register", {
+    const response = await fetch("https://auth-app-ncgj.onrender.com/api/register", {
       method: "POST",
       headers: {
         "content-type": "application/json"
