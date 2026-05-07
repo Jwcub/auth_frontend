@@ -64,7 +64,7 @@ body {
     background-color: #1e4fd6;
 }
 
-.admin-link {
+.link {
     margin: 0 16px;
     text-decoration: none;
     color: var(--muted);

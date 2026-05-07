@@ -8,6 +8,10 @@ if(document.getElementById("login-form")) {
   document.getElementById("login-form").addEventListener("submit", login);
 }
 
+if(document.getElementById("register-form")) {
+  document.getElementById("register-form").addEventListener("submit", newAccount);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   changeMenu();
 });
@@ -51,15 +55,60 @@ async function login(event) {
   }
 }
 
+// Funktion för att registera ny användare
+async function newAccount(event) {
+  event.preventDefault();
+
+  const usernameEl = document.getElementById("username")
+  const passwordEl = document.getElementById("password")
+  const usernameInput = usernameEl.value;
+  const passwordInput = passwordEl.value;
+  const messageEl = document.getElementById("error-message");
+  messageEl.innerHTML = "";
+
+  if(!usernameInput || !passwordInput) {
+    messageEl.innerHTML = "Användarnamn och lösenord måste anges";
+    return
+  }
+
+  try {
+    const response = await fetch("http://localhost:5500/api/register", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({
+        username: usernameInput,
+        password: passwordInput
+      })
+      });
+
+    const data = await response.json();
+    if (!response.ok) {
+      messageEl.innerText = data.error;
+      return;
+    }
+
+    messageEl.innerText = data.message;
+    usernameEl.value = "";
+    passwordEl.value = "";
+    
+  } catch (err) {
+    console.log(err.message);
+    messageEl.innerText = "Något gick fel";
+  }
+}
+
 // Funktion för generera meny för inloggad vy
 function changeMenu() {
   if(localStorage.getItem("login-token")) {
     loginMenuArea.innerHTML = `
-    <a href="/admin" class="admin-link">Admin</a>
+    <a href="/admin" class="link">Admin</a>
     <a class="login-btn" id="logout-btn">Logga ut</a>
     `;
   } else {
     loginMenuArea.innerHTML = `
+    <a href="/register" class="link">Registrera</a>
     <a class="login-btn" href="/login">Logga in</a>
     `;
   }

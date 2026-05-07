@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboration 4</title>
+  </head>
+  <body>
+
+    <header class="header">
+        <div class="logo">
+            <h1>Backendkurs</h1>
+        </div>
+
+        <nav class="main-nav">
+            <a href="/index">Hem</a>
+            <a href="/about">Om sidan</a>
+        </nav>
+
+        <div class="login">
+            
+        </div>
+    </header>
+
+    <main class="content">
+        <h2>Registera konto</h2>
+        <p>
+          Fyll i formuläret nedan för att registrera en ny användare i databasen. När du klickar på "Registrera" skickas dina uppgifter till API:et där ditt lösenord krypteras med bcrypt innan det lagras säkert.
+        </p>
+
+        <form id="register-form">
+          <label for="username">Användarnamn:</label>
+          <input type="text" id="username" placeholder="Användarnamn">
+
+          <label for="password">Lösenord:</label>
+          <input type="text" id="password" placeholder="Lösenord">
+          <button class="login-btn">Registera konto</button>
+          <div id="error-message"></div>
+        </form>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
