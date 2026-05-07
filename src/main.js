@@ -31,7 +31,7 @@ async function login(event) {
   }
 
   try {
-    const response = await fetch("https://auth-app-ncgj.onrender.com//api/login.html", {
+    const response = await fetch("https://auth-app-ncgj.onrender.com/api/login.html", {
       method: "POST",
       headers: {
         "content-type": "application/json"
