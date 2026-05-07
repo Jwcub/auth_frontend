@@ -109,7 +109,7 @@ function changeMenu() {
   } else {
     loginMenuArea.innerHTML = `
     <a href="/register.html" class="link">Registrera</a>
-    <a class="login-btn" href="/login">Logga in</a>
+    <a class="login-btn" href="/login.html">Logga in</a>
     `;
   }
 
