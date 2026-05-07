@@ -31,7 +31,7 @@ async function login(event) {
   }
 
   try {
-    const response = await fetch("https://auth-app-psi-ochre.vercel.app/api/login", {
+    const response = await fetch("https://auth-app-psi-ochre.vercel.app/api/login.html", {
       method: "POST",
       headers: {
         "content-type": "application/json"
