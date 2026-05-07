@@ -24,11 +24,19 @@
     </header>
 
     <main class="content">
-        <h2>Om sidan</h2>
+        <h2>Om projektet</h2>
         <p>
-          Detta är en webbplats för kursen backend-baserad webbutveckling.
-          Här kommer du att arbeta med servrar, databaser och API:er.
+          Syftet med denna applikation är att praktisera moderna metoder för autentisering och dataskydd. Genom att bygga ett eget API har jag fått djupare förståelse för hur man skyddar användardata och begränsar åtkomst till känsliga resurser.
         </p>
+        
+        <ul>
+            <h3>Teknisk stack</h3>
+            <li><strong>Backend:</strong> Express med fokus på RESTful design.</li>
+            <li><strong>Lösenordssäkerhet:</strong> Användning av bcrypt för envägs-hashing av lösenord innan de lagras i databasen.</li>
+            <li><strong>Autentisering:</strong> Implementering av JSON Web Tokens (JWT) för att hantera säkra sessioner och verifiera användarens identitet vid anrop till skyddade endpoints.</li>
+            <li><strong>Frontend:</strong> Byggd för att demonstrera hur token-baserad inloggning fungerar i praktiken.</li>
+        </ul>
+
     </main>
 
     <script type="module" src="/src/main.js"></script>
