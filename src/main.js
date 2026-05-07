@@ -45,7 +45,7 @@ async function login(event) {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("login-token", data.response.token);
-        window.location.href = "admin.html";
+        window.location.href = "/admin.html";
       } else {
         throw Error;
       }
@@ -103,12 +103,12 @@ async function newAccount(event) {
 function changeMenu() {
   if(localStorage.getItem("login-token")) {
     loginMenuArea.innerHTML = `
-    <a href="/admin" class="link">Admin</a>
+    <a href="/admin.html" class="link">Admin</a>
     <a class="login-btn" id="logout-btn">Logga ut</a>
     `;
   } else {
     loginMenuArea.innerHTML = `
-    <a href="/register" class="link">Registrera</a>
+    <a href="/register.html" class="link">Registrera</a>
     <a class="login-btn" href="/login">Logga in</a>
     `;
   }
