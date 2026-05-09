@@ -28,7 +28,8 @@ För att köra denna frontend krävs att webbtjänsten (API:et) från Uppgift 1 
 ### Installation
 1. Klona detta repository:
    ```bash
-   git clone [https://github.com/Jwcub/auth_frontend.git]
+   git clone [https://github.com/Jwcub/auth_frontend.git](https://github.com/Jwcub/auth_frontend.git)
+   ```
 
 ## Tillgänglig
-Applikationen finns tillgänglig vid: [https://frontendaut.netlify.app/] 
+Applikationen finns tillgänglig vid: [https://frontendaut.netlify.app/](https://frontendaut.netlify.app/)
