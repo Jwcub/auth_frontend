@@ -3,7 +3,7 @@ Detta projekt är en webbapplikation (frontend) byggd för att interagera med en
 
 ## Beskrivning
 
-Applikationen är skapad för att öva på använda autentisering av webbinnehåll. Applikationen tillåter användare att registrera nya konton, logga in och få tillgång till skyddat innehåll som endast är tillgängligt för autentiserade användare.
+Applikationen är skapad för att öva på att använda autentisering av webbinnehåll. Applikationen tillåter användare att registrera nya konton, logga in och få tillgång till skyddat innehåll som endast är tillgängligt för autentiserade användare.
 
 ### Huvudfunktioner:
 * **Registrering:** Formulär för att skapa ett nytt konto (POST-anrop).
@@ -15,7 +15,7 @@ Applikationen är skapad för att öva på använda autentisering av webbinnehå
 
 * **HTML5 & CSS:** För struktur och responsiv design.
 * **Vanilla JavaScript:** För logik och DOM-manipulering.
-* **Vite** För komprimering av filer
+* **Vite:** För snabb utvecklingsmiljö och prestandaoptimering.
 * **Fetch API:** För asynkrona HTTP-anrop till backend.
 * **JWT (JSON Web Token):** För säker identifiering av användaren.
 * **Bcrypt** För kryptering av lösenord.
@@ -31,4 +31,4 @@ För att köra denna frontend krävs att webbtjänsten (API:et) från Uppgift 1 
    git clone [https://github.com/Jwcub/auth_frontend.git]
 
 ## Tillgänglig
-Applikationen finns tillgänglig vid: 
+Applikationen finns tillgänglig vid: [https://frontendaut.netlify.app/] 

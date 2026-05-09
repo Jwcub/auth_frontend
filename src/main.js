@@ -23,7 +23,7 @@ async function login(event) {
   const usernameInput = document.getElementById("username").value;
   const passwordInput = document.getElementById("password").value;
   const messageEl = document.getElementById("error-message");
-  messageEl.innerHTML = "";
+  messageEl.innerHTML = "Laddar...";
 
   if(!usernameInput || !passwordInput) {
     messageEl.innerHTML = "Användarnamn och lösenord måste anges";
@@ -64,7 +64,7 @@ async function newAccount(event) {
   const usernameInput = usernameEl.value;
   const passwordInput = passwordEl.value;
   const messageEl = document.getElementById("error-message");
-  messageEl.innerHTML = "";
+  messageEl.textContent = "Laddar";
 
   if(!usernameInput || !passwordInput) {
     messageEl.innerHTML = "Användarnamn och lösenord måste anges";

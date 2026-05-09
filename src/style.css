@@ -178,7 +178,6 @@ button:active {
 #error-message {
   margin-top: 10px;
   font-weight: 500;
-  color: red;
 }
 
 @media (max-width: 600px) {
