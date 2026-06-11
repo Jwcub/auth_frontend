@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Laboration 4</title>
 
-    <script>
-      if(!localStorage.getItem("login-token")) {
-        window.location.href = "login.html";
-      }
-    </script>
+    <script src="/src/checkAuth.js"></script>
+    <script type="module" src="/src/main.js"></script>
     
   </head>
   <body>
@@ -32,13 +29,12 @@
 
     <main class="content">
         <h2>Admin</h2>
-        <p>
-          Du har nu nått den skyddade delen av applikationen. Denna sida är enbart tillgänglig eftersom din webbläsare lagrat en JWT i localStorage. 
-        </p>
+        <p id="admin-content">Du är nu inloggad på sidan och kan visa skyddad innehåll...</p>
+        <button id="admin-btn">Hämta innehåll</button>
+        <div id="print-area"></div>
+
 
         <img src="sucess-kid.jpg" alt="sucess-kid" style="margin-top: 40px; max-width: 300px;">
     </main>
-
-    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

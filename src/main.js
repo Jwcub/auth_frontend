@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
   changeMenu();
 });
 
+if(document.getElementById("admin-btn")){
+  document.getElementById("admin-btn").addEventListener("click", getProtectedContent);
+}
+
 // Funktion för inloggningsformulär
 async function login(event) {
   event.preventDefault();
@@ -121,6 +125,46 @@ function changeMenu() {
       console.log("ta bort token")
       window.location.href = "login.html";
     });
+  }
+}
+
+async function getProtectedContent(e) {
+  e.preventDefault();
+
+  const token = localStorage.getItem("login-token");
+
+  try{
+    const res = await fetch("https://auth-app-ncgj.onrender.com/api/admin", {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+        "authorization": "Bearer " + token
+      }
+    });
+
+    if(res.ok) {
+      const data = await res.json();
+      printData(data.message);
+    }
+    else {
+      throw new Error(res.status);
+
+    }
+
+  } catch(err) {
+    console.log("Något blev fel:" + err)
+  }
+}
+
+function printData(data) {
+  const printArea = document.getElementById("print-area");
+
+  if(printArea) {
+    printArea.innerHTML = "";
+
+    const text = document.createElement("p");
+    text.innerText = data;
+    document.getElementById("print-area").appendChild(text);
   }
 }
 
